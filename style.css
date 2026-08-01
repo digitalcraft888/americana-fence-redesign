@@ -173,10 +173,21 @@ h1,h2,h3,h4{font-family:var(--f-display);font-weight:700;line-height:1.05;letter
 .scard__body p{color:var(--slate);font-size:.95rem;margin:0 0 15px;flex:1}
 .scard__cta{font-family:var(--f-display);font-weight:600;color:var(--red);display:inline-flex;align-items:center;gap:.4em;font-size:1rem}
 .scard__cta .i{transition:transform .2s}
-.scard--cta{background:var(--grad-navy);color:#fff;justify-content:center;text-align:center;border:0}
-.scard--cta .scard__body{padding:28px 22px}
-.scard--cta h3{color:#fff;font-size:1.4rem}
-.scard--cta p{color:#c8dbf2}
+.scard--cta{grid-column:1/-1;background:var(--grad-navy);color:#fff;border:0;position:relative;overflow:hidden}
+.scard--cta::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(65% 130% at 100% 0,rgba(216,30,40,.30),transparent 60%)}
+.scard--cta .scard__body{position:relative;z-index:1;padding:26px 22px;gap:16px;text-align:center;align-items:center}
+.scard--cta__text{display:flex;flex-direction:column;gap:6px}
+.scard--cta h3{color:#fff;font-size:1.5rem}
+.scard--cta p{color:#c8dbf2;margin:0}
+.scard--cta .btn{flex:none}
+/* horizontal banner from tablet up */
+@media (min-width:600px){
+  .scard--cta .scard__body{flex-direction:row;justify-content:space-between;text-align:left;padding:28px 34px;gap:30px}
+  .scard--cta__text{flex:1}
+  .scard--cta__text p{max-width:70ch}
+  .scard--cta .btn{width:auto}
+  .scard--cta h3{font-size:1.75rem}
+}
 @media (hover:hover){
   .scard:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
   .scard:hover .scard__media img{transform:scale(1.07)}

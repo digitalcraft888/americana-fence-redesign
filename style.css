@@ -313,8 +313,10 @@ h1,h2,h3,h4{font-family:var(--f-display);font-weight:700;line-height:1.05;letter
 .quote-form__ok{margin:12px 0 0;background:#e9f7ee;color:#1c7a3f;border:1px solid #b7e6c6;padding:12px 14px;border-radius:12px;font-weight:600;font-size:.92rem}
 
 /* ---------- Footer ---------- */
-.footer{background:#08192e;color:#b9c9dc;padding:44px 0 0;font-size:.94rem}
-.footer__grid{display:grid;grid-template-columns:1fr;gap:30px;padding-bottom:34px}
+.footer{background:#08192e;color:#b9c9dc;padding:52px 0 0;font-size:.94rem}
+.footer__grid{display:grid;grid-template-columns:1fr;gap:32px}
+/* higher specificity so .wrap's shorthand padding can't zero the bottom space */
+.footer .footer__grid{padding-bottom:48px}
 .footer__logo{background:#fff;border-radius:12px;padding:9px 13px;width:max-content;margin-bottom:14px}
 .footer__brand p{margin:0 0 16px;max-width:42ch;color:#93a6bd}
 .footer__badges{display:flex;gap:9px;flex-wrap:wrap}
@@ -324,7 +326,7 @@ h1,h2,h3,h4{font-family:var(--f-display);font-weight:700;line-height:1.05;letter
 .footer__contact p{display:flex;align-items:center;gap:.5em;margin:0 0 9px;color:#93a6bd}
 .footer__contact .i{color:#6f8bab}
 .footer__contact .btn{margin-top:10px;width:100%}
-.footer__bar{border-top:1px solid rgba(255,255,255,.1);padding:18px 0}
+.footer__bar{border-top:1px solid rgba(255,255,255,.1);padding:22px 0}
 .footer__bar-inner{display:flex;flex-direction:column;gap:6px;font-size:.8rem;color:#7f92aa;text-align:center}
 .footer__meta{color:#66788f}
 @media (hover:hover){.footer__col a:hover{color:#fff}.footer__phone:hover{color:var(--red)}}

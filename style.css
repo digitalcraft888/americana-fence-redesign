@@ -150,6 +150,8 @@ h1,h2,h3,h4{font-family:var(--f-display);font-weight:700;line-height:1.05;letter
 .section--navy{background:var(--grad-navy);color:#fff}
 .section__head{text-align:center;max-width:820px;margin:0 auto 34px}
 .section__head--light .section__title{color:#fff}
+/* titles on dark backgrounds must stay white (base h1-h4 rule forces --ink otherwise) */
+.section--navy .section__title,.cta-final h2,.areas__intro .section__title{color:#fff}
 
 .grid{display:grid;gap:16px;grid-template-columns:1fr}
 
@@ -271,7 +273,7 @@ h1,h2,h3,h4{font-family:var(--f-display);font-weight:700;line-height:1.05;letter
 
 /* ---------- FAQ ---------- */
 .faq__grid{display:grid;grid-template-columns:1fr;gap:28px;align-items:start}
-.faq__intro .btn{width:100%}
+.faq__intro .btn{width:100%;margin-top:24px}
 .faq__list{display:flex;flex-direction:column;gap:11px}
 .faq{background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden;transition:box-shadow .2s}
 .faq[open]{box-shadow:var(--shadow);border-color:transparent}

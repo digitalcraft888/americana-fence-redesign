@@ -401,6 +401,48 @@ body{padding-bottom:70px}
 .reveal.is-in{opacity:1;transform:none}
 
 /* ============================================================
+   MOBILE (<600px): 2 compact cards per row in card sections
+   (Reviews stay single-column — long quotes need the width)
+   ============================================================ */
+@media (max-width:599px){
+  /* Why Americana */
+  .features{grid-template-columns:repeat(2,1fr);gap:12px}
+  .feature{padding:18px 14px}
+  .feature__ic{width:44px;height:44px;margin-bottom:10px;border-radius:12px}
+  .feature__ic svg{width:22px;height:22px}
+  .feature h3{font-size:1.06rem;line-height:1.12}
+  .feature p{font-size:.84rem;line-height:1.45}
+
+  /* Services */
+  .services{grid-template-columns:repeat(2,1fr);gap:12px}
+  .scard__media{height:116px}
+  .scard__badge{width:36px;height:36px;left:10px;bottom:10px;border-radius:10px}
+  .scard__badge svg{width:18px;height:18px}
+  .scard__body{padding:14px 13px 16px}
+  .scard__body h3{font-size:1.01rem;line-height:1.12;margin-bottom:6px}
+  .scard__body p{font-size:.82rem;line-height:1.4;margin-bottom:12px}
+  .scard__cta{font-size:.9rem}
+  .scard--cta{grid-column:1 / -1}          /* keep the "Not sure?" banner full width */
+
+  /* Why Work With Us — plates 2-up; head & photo stay full width */
+  .bento{grid-template-columns:repeat(2,1fr);gap:12px}
+  .bento__head,.bento__photo{grid-column:1 / -1}
+  .plate{padding:16px 13px}
+  .plate__ic{width:38px;height:38px;margin-bottom:8px;border-radius:10px}
+  .plate__ic svg{width:20px;height:20px}
+  .plate__n{font-size:2rem;top:8px;right:12px}
+  .plate h3{font-size:1rem;line-height:1.12}
+  .plate p{font-size:.8rem;line-height:1.4}
+
+  /* Process steps 2-up */
+  .steps{grid-template-columns:repeat(2,1fr);gap:12px}
+  .step{padding:18px 14px}
+  .step__n{font-size:2.3rem}
+  .step h3{font-size:1.06rem;line-height:1.12}
+  .step p{font-size:.84rem;line-height:1.45}
+}
+
+/* ============================================================
    ≥ 600px  (large phones / small tablets)
    ============================================================ */
 @media (min-width:600px){
